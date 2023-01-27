@@ -1,0 +1,113 @@
+getgenv().SecureMode = true
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Custom GUI",
+    LoadingTitle = "rahskiee#4138",
+    LoadingSubtitle = "tap in",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "CustomGUI"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "QXpq4eys", -- The Discord invite code, do not include discord.gg/
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Custom GUI",
+       Note = "Welcome, tap in $5-10 custom GUI's",
+       FileName = "Custom GUI",
+       SaveKey = false,
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = "custom"
+    }
+ })
+ --Discord
+ Rayfield:Notify({
+    Title = "gangnem",
+    Content = "QXpq4eys",
+    Duration = 6.5,
+    Image = 3241672660,
+    Actions = { -- Notification Buttons
+       Ignore = {
+          Name = "Okay!",
+          Callback = function()
+          print("The user tapped Okay!")
+       end
+    },
+ },
+ })
+
+ -- TAB
+ local Tab = Window:CreateTab("Hub", 4483362458) -- Title, Image
+ local Button = Tab:CreateButton({
+    Name = "Welcome",
+    Callback = function()
+        print("discord.gg/QXpq4eys")
+    end,
+ })
+
+ local Tab = Window:CreateTab("Scripts", 4483362458) -- Title, Image
+ local Button = Tab:CreateButton({
+   Name = "Cmds",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+
+   
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Drop Offs GUI",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/rahskiee/drop-offs/bbf6ffe3cf06164c17c0d1af9a40097f12ecb425/drop%20offs"))();
+   -- The function that takes place when the button is pressed
+   end,
+})
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ local Slider = Tab:CreateSlider({
+    Name = "FOV",
+    Range = {0, 120},
+    Increment = 1,
+    Suffix = "Field Of View",
+    CurrentValue = 1,
+    Flag = "Slider", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(s)
+    -- The function that takes place when the slider changes
+    -- The variable (Value) is a number which correlates to the value the slider is currently at
+    game.Workspace.CurrentCamera.FieldOfView = s
+end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "dm for scripts you want added.",
+    Callback = function()
+    -- The function that takes place when the button is pressed
+    end,
+ })
+ --Drop Offs
+ local Tab = Window:CreateTab("Tap In", 4483362458) -- Title, Image
+ local Button = Tab:CreateButton({
+   Name = "$5-10 GUI's Custom.",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+ local Button = Tab:CreateButton({
+   Name = "rahskiee#4138",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+local Button = Tab:CreateButton({
+    Name = "dm if exp problems.",
+    Callback = function()
+    -- The function that takes place when the button is pressed
+    end,
+ })
+
+ setclipboard("https://discord.gg/QXpq4eys")
+toclipboard("https://discord.gg/QXpq4eys")
